@@ -1,5 +1,5 @@
 diff --git a/browser/base/content/navigator-toolbox.inc.xhtml b/browser/base/content/navigator-toolbox.inc.xhtml
-index 00c8976d3e258c0875d7da2f3ec823d8907a84c9..cc61d5a845b5ce22a61f5a1aab8b280b2bcdf101 100644
+index 30e7b9b2ac63db6ccd2727a9341081cecefc25cb..fa2b32afce8064ac372aad78c6ff9e2e68a4f865 100644
 --- a/browser/base/content/navigator-toolbox.inc.xhtml
 +++ b/browser/base/content/navigator-toolbox.inc.xhtml
 @@ -2,7 +2,7 @@
@@ -51,3 +51,55 @@ index 00c8976d3e258c0875d7da2f3ec823d8907a84c9..cc61d5a845b5ce22a61f5a1aab8b280b
  
    <toolbar id="nav-bar"
             class="browser-toolbar chromeclass-location"
+@@ -476,27 +480,31 @@
+                      hidden="true"
+                      overflows="false"
+                      removable="false"/>
+-    </hbox>
+-
+-    <toolbarbutton id="nav-bar-overflow-button"
+-                   class="toolbarbutton-1 chromeclass-toolbar-additional"
+-                   delegatesanchor="true"
+-                   skipintoolbarset="true"
+-                   data-l10n-id="navbar-overflow">
+-      <box class="toolbarbutton-animatable-box">
+-        <image class="toolbarbutton-animatable-image"/>
+-      </box>
+-    </toolbarbutton>
++    
++
++      <toolbarbutton id="nav-bar-overflow-button"
++                    class="toolbarbutton-1 chromeclass-toolbar-additional"
++                    delegatesanchor="true"
++                    skipintoolbarset="true"
++                    removable="true"
++                    overflows="false"
++                    data-l10n-id="navbar-overflow">
++        <box class="toolbarbutton-animatable-box">
++          <image class="toolbarbutton-animatable-image"/>
++        </box>
++      </toolbarbutton>
+ 
+-    <toolbaritem id="PanelUI-button"
+-                 removable="false">
+-      <toolbarbutton id="PanelUI-menu-button"
+-                     class="toolbarbutton-1"
+-                     delegatesanchor="true"
+-                     badged="true"
+-                     consumeanchor="PanelUI-button"
+-                     data-l10n-id="appmenu-menu-button-closed2"/>
+-    </toolbaritem>
++      <toolbaritem id="PanelUI-button"
++                  removable="false"
++                  overflows="false">
++        <toolbarbutton id="PanelUI-menu-button"
++                      class="toolbarbutton-1"
++                      delegatesanchor="true"
++                      badged="true"
++                      consumeanchor="PanelUI-button"
++                      data-l10n-id="appmenu-menu-button-closed2"/>
++      </toolbaritem>
++    </hbox>
+     <hbox class="titlebar-spacer" type="post-tabs"/>
+ #include private-browsing-indicator.inc.xhtml
+     <toolbarbutton class="content-analysis-indicator toolbarbutton-1 content-analysis-indicator-icon"/>

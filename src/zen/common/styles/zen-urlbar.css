@@ -361,6 +361,14 @@ button.popup-notification-dropmarker {
   }
 }
 
+#nav-bar-overflow-button {
+  visibility: hidden;
+}
+
+#nav-bar[overflowing] #nav-bar-overflow-button {
+  visibility: visible;
+}
+
 /* Thanks to https://github.com/JLBlk!
  * Checkout https://github.com/JLBlk/Zen-Themes/blob/main/SuperUrlBar/SuperUrlBar.css
  */
